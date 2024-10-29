@@ -4,7 +4,7 @@ import pg from 'pg'
 const { Client } = pg
 dotenv.config()
 
-export const client = new Client({
+const client = new Client({
   user: process.env.DB_USER,
   password: process.env.PASSWORD,
   host: process.env.HOST,
@@ -14,6 +14,7 @@ export const client = new Client({
 
 await client.connect()
  
+export default client
 // const result = await client.query('SELECT $1::text as name', ['brianc'])
 // console.log(result)
  

@@ -1,4 +1,4 @@
-import { client } from "../db/database.js"
+import client from "../db/database.js"
 
 export const basicAuthMid = (req, res, next) => {
     try {
